@@ -118,7 +118,6 @@
     </Compile>
     <Compile Include="Models\WeatherData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\ContryCodeDictionary.cs" />
     <Compile Include="Services\CountryCodeConverter.cs" />
     <Compile Include="Services\DataProviders\Concrete\OpenWeatherMapProvider.cs" />
     <Compile Include="Services\DataProviders\Contract\IDataProvider.cs" />

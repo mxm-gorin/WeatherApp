@@ -7,42 +7,43 @@
 
 <h2>Weather Forecast</h2>
 
-
-<table class="table">
-    <tr>
-        @using (Html.BeginForm())
-        {
+@using (Html.BeginForm())
+{
+    <table class="table">
+        <tr>
             <td>@Html.Label("City")</td>
-            <td>@Html.Editor("City")<input type="submit" value="Get" class="btn btn-default" /></td>
-            }
-    </tr>
-    <tr>
-        <td>@Html.LabelFor(m => m.Country)</td>
-        <td>@Html.DisplayFor(m => m.Country)</td>
-    </tr>
-    <tr>
-        <td>@Html.LabelFor(m => m.Temperature)</td>
-        <td>@Html.DisplayFor(m => m.Temperature)</td>
-    </tr>
-    <tr>
-        <td>@Html.LabelFor(m => m.TempratureMax)</td>
-        <td>@Html.DisplayFor(m => m.TempratureMax)</td>
-    </tr>
-    <tr>
-        <td>@Html.LabelFor(m => m.TemperatureMin)</td>
-        <td>@Html.DisplayFor(m => m.TemperatureMin)</td>
-    </tr>
-    <tr>
-        <td>@Html.LabelFor(m => m.Humidity)</td>
-        <td>@Html.DisplayFor(m => m.Humidity)</td>
-    </tr>
-    <tr>
-        <td>@Html.LabelFor(m => m.WindSpeed)</td>
-        <td>@Html.DisplayFor(m => m.WindSpeed)</td>
-    </tr>
-    <tr>
-        <td>@Html.LabelFor(m => m.Conditions)</td>
-        <td>@Html.DisplayFor(m => m.Conditions)</td>
-    </tr>
-</table>
+            <td>@Html.Editor("City")<input type="submit" value="Get" class="btn btn-default"/></td>
+
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.Country)</td>
+            <td>@Html.DisplayFor(m => m.Country)</td>
+
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.Temperature)</td>
+            <td>@Html.DisplayFor(m => m.Temperature)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.TempratureMax)</td>
+            <td>@Html.DisplayFor(m => m.TempratureMax)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.TemperatureMin)</td>
+            <td>@Html.DisplayFor(m => m.TemperatureMin)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.Humidity)</td>
+            <td>@Html.DisplayFor(m => m.Humidity)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.WindSpeed)</td>
+            <td>@Html.DisplayFor(m => m.WindSpeed)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.Conditions)</td>
+            <td>@Html.DisplayFor(m => m.Conditions)</td>
+        </tr>
+    </table>
+}
 
