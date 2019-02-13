@@ -23,14 +23,17 @@ namespace WeatherApp.Services.DataProviders.Concrete
             using (var client = new WebClient())
             {
                 var apiUrl = string.Format(Url, city, AppId, Units);
+                
                 try
                 {
                     var data = client.DownloadString(apiUrl);
                     dynamic jsonData = JsonConvert.DeserializeObject(data);
+                    string countryCode = jsonData.sys.country;
+
                     var weatherData = new WeatherData
                     {
                         City = jsonData.name,
-                        Country = jsonData.sys.country,
+                        Country = CountryCodeConverter.ConvertTwoLetterCodeToName(countryCode),
                         Temperature = jsonData.main.temp,
                         TempratureMax = jsonData.main.temp_max,
                         TemperatureMin = jsonData.main.temp_min,
