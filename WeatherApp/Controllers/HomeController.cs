@@ -20,6 +20,8 @@ namespace WeatherApp.Controllers
 
         public ActionResult Weather()
         {
+            var ip = Request.UserHostAddress;
+
             return View();
         }
 
